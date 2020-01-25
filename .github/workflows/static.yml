@@ -1,6 +1,9 @@
 name: Static Publication
 
-on: [push]
+on:
+  push:
+    paths:
+    - 'docs/**'
 
 jobs:
   build:
