@@ -9,5 +9,5 @@ jobs:
     - name: publish
       uses: maxheld83/ghpages@v0.2.1
       env:
-        BUILD_DIR: "docs/"
+        BUILD_DIR: "./docs"
         GH_PAT: ${{ secrets.GITHUB_TOKEN }}
