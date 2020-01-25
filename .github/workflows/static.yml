@@ -1,0 +1,13 @@
+name: Static Publication
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: publish
+      uses: maxheld83/ghpages@v0.2.1
+      env:
+        BUILD_DIR: "docs/"
+        GH_PAT: ${{ secrets.GITHUB_TOKEN }}
