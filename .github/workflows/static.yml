@@ -7,8 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: publish
-        uses: maxheld83/ghpages@v0.2.1
+      - name: doc deploy
+      - uses: peaceiris/actions-gh-pages@v2
         env:
-          BUILD_DIR: "./docs"
-          GH_PAT: ${{ secrets.STATIC_DEPLOY_KEY }}
+          ACTIONS_DEPLOY_KEY: ${{ secrets.STATIC_DEPLOY_KEY }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./docs
